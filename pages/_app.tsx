@@ -20,8 +20,8 @@ const App = ({ Component, pageProps }) => {
 
   return (
     <>
-      <Script id="Adsense" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2203570267369097"
-     crossOrigin="anonymous"></Script>
+      <script  async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2203570267369097"
+     crossOrigin="anonymous"></script>
         <Script
         id="gtm-script"
           dangerouslySetInnerHTML={{
