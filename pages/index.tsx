@@ -32,7 +32,8 @@ export default observer(function Home () {
       </div>
       <div className="">
       {store.won && <h1>You won!</h1>}
-      {store.lost && <h1>You lost!</h1>}
+      {(store.lost && !store.won) && <h1>You lost!</h1>}
+      {(store.lost && !store.won) && <h1>Correct Answer: {store.word}</h1>}
       {(store.won || store.lost) && (
         <button onClick={store.init}>Play Again</button>
         )}
@@ -40,10 +41,10 @@ export default observer(function Home () {
         <div className="">
       <Qwerty store={store} />
       </div>
-      {/* <div className="">
+      <div className="">
       word: {store.word}
       guesses: {JSON.stringify(store.guesses)}
-      </div> */}
+      </div>
     <div className="text-xs font-semibold">
       Designed & Developed By {" "}
       <span className="text-transform underline">
