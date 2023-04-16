@@ -1,6 +1,6 @@
 import { observer } from 'mobx-react-lite'
 
-export default observer(function Querty({ store }) {
+export default observer(function Querty({store}: any) {
   const qwerty = ['qwertyuiop', 'asdfghjkl', 'zxcvbnm']
   return (
     <div>
