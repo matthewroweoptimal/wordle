@@ -16,6 +16,8 @@ export default observer(function Home () {
   return (
     <div className="flex flex-col h-screen w-screen text-center items-center justify-around">
       <div className="">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2203570267369097"
+     crossOrigin="anonymous"></script>
         <h1 className="text-6xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-br from-orange-400 to-red-600 text-center tracking-[10px]">Wordle</h1>
       </div>
       <div className="">
