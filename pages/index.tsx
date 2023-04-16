@@ -41,10 +41,10 @@ export default observer(function Home () {
         <div className="">
       <Qwerty store={store} />
       </div>
-      <div className="">
+      {/* <div className="">
       word: {store.word}
       guesses: {JSON.stringify(store.guesses)}
-      </div>
+      </div> */}
     <div className="text-xs font-semibold">
       Designed & Developed By {" "}
       <span className="text-transform underline">
