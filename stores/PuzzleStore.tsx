@@ -61,6 +61,26 @@ const PuzzleStore ={
         this.guesses[this.currentGuess] + e.key.toLowerCase()
     }
   },
+  handleSoftKey(e: string) {
+    if (this.won || this.lost) {
+      return
+    }
+
+    if (e === 'E') {
+      return this.submitGuess()
+    }
+    if (e === 'B') {
+      this.guesses[this.currentGuess] = this.guesses[this.currentGuess].slice(
+        0,
+        this.guesses[this.currentGuess].length - 1
+      )
+      return
+    }
+    if (this.guesses[this.currentGuess].length < 5 && e.match(/^[A-z]$/)) {
+      this.guesses[this.currentGuess] =
+        this.guesses[this.currentGuess] + e.toLowerCase()
+    }
+  },
 }
 
 export default PuzzleStore;

@@ -12,7 +12,7 @@ export default function Guess({ isGuessed, guess, word }) {
   
           return (
             <div
-              className={`flex h-16 w-16 items-center justify-center border border-gray-400 font-bold uppercase text-2xl text-white ${bgColor}`}
+              className={`flex h-14 w-14 md:h-16 md:w-16 lg:h-16 lg:w-16 xl:h-20 xl:w-20 items-center justify-center border border-gray-400 font-bold uppercase text-2xl text-white ${bgColor}`}
                 key={i+20}
             >
               {guess[i]}
