@@ -16,8 +16,8 @@ export default observer(function Home() {
   return (
     <div className="flex flex-col h-screen w-screen text-center items-center justify-around min-w-fit min-h-fit">
       <div className="">
-        <h1 className="text-2xl sm:text-4xl md:text-4xl lg:text-6xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-br from-orange-400 to-red-600 text-center md:tracking-[6px] tracking-[10px]">
-          Wordle
+        <h1 className="text-2xl sm:text-4xl md:text-4xl lg:text-6xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-green-600 text-center md:tracking-[6px] tracking-[10px]">
+          Purbeck Wordle
         </h1>
       </div>
       <div className="">
@@ -53,12 +53,12 @@ export default observer(function Home() {
       word: {store.word}
       guesses: {JSON.stringify(store.guesses)}
       </div> */}
-      <div className="text-xs font-semibold mt-4">
+      {/*<div className="text-xs font-semibold mt-4">
         Designed & Developed By{" "}
         <span className="text-transform underline">
           <a href="https://rutvijsathe.dev">Rutvij Sathe</a>
         </span>
-      </div>
+      </div>*/}
     </div>
   );
 });
