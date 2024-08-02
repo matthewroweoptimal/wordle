@@ -37,7 +37,7 @@ const PuzzleStore ={
       .filter((letter) => this.allGuesses.includes(letter))
   },
   init() {
-    const daynum = Math.round((today - startDate) / (1000 * 60 * 60 * 24)) - 1;
+    const daynum = Math.round((today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)) - 1;
     if (today >= startDate && today <= endDate) {
       this.word = mywords[daynum];
     }
@@ -97,7 +97,7 @@ const PuzzleStore ={
   {
  
     if (today >= startDate && today <= endDate) {
-      const daynum = Math.round((today - startDate) / (1000 * 60 * 60 * 24));
+      const daynum = Math.round((today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
       return `camp day ${daynum}`;
     }
     else {
