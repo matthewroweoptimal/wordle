@@ -19,7 +19,8 @@ export default observer(function Home() {
         <h1 className="text-2xl sm:text-4xl md:text-4xl lg:text-6xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-green-600 text-center md:tracking-[6px] tracking-[10px]">
           Purbeck Wordle
         </h1>
-      </div>
+        </div>
+
       <div className="">
         {store.guesses?.map((_, i) => (
           <Guess
@@ -29,7 +30,7 @@ export default observer(function Home() {
             isGuessed={i < store.currentGuess}
           />
         ))}
-      </div>
+        </div>
       {
         (store.won || store.lost) ?
         (<div className="">
@@ -48,6 +49,8 @@ export default observer(function Home() {
       }
       <div className="">
         <Qwerty store={store} />
+      </div>
+      <div> {store.duringCamp()}
       </div>
       {/* <div className="">
       word: {store.word}

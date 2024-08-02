@@ -1,4 +1,9 @@
 import words from '../words.json'
+import mywords from '../mywords.json'
+
+const startDate = new Date('08/08/2024');
+const endDate = new Date('08/16/2024');
+const today = new Date();
 
 const PuzzleStore ={
   word: '',
@@ -32,12 +37,19 @@ const PuzzleStore ={
       .filter((letter) => this.allGuesses.includes(letter))
   },
   init() {
-    this.word = words[Math.round(Math.random() * words.length)]
+    const daynum = Math.round((today - startDate) / (1000 * 60 * 60 * 24)) - 1;
+    if (today >= startDate && today <= endDate) {
+      this.word = mywords[daynum];
+    }
+    else {
+      this.word = mywords[Math.round(Math.random() * mywords.length)]
+    }
     this.guesses.replace(new Array(6).fill(''))
     this.currentGuess = 0
   },
   submitGuess() {
-    if (words.includes(this.guesses[this.currentGuess])) {
+    var allwords = mywords.concat(words);
+    if (allwords.includes(this.guesses[this.currentGuess])) {
       this.currentGuess += 1
     }
   },
@@ -81,6 +93,17 @@ const PuzzleStore ={
         this.guesses[this.currentGuess] + e.toLowerCase()
     }
   },
+  duringCamp()
+  {
+ 
+    if (today >= startDate && today <= endDate) {
+      const daynum = Math.round((today - startDate) / (1000 * 60 * 60 * 24));
+      return `camp day ${daynum}`;
+    }
+    else {
+      return 'camp not started yet, random word';
+    }
+  }
 }
 
 export default PuzzleStore;
